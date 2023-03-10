@@ -1,17 +1,38 @@
 # EmbeddedRobot
 Projekt zu Embedded System Master Wahlfach KI/PI HTW Saar
 
-## Projekt zum laufen bekommen
+- [EmbeddedRobot](#embeddedrobot)
+  - [Arbeiten mit dem Roboter](#arbeiten-mit-dem-roboter)
+    - [Bauen des Projektes](#bauen-des-projektes)
+    - [Hochladen zum Roboter](#hochladen-zum-roboter)
+      - [EV3Duder](#ev3duder)
 
-### Schritte die unternommen wurden
 
-1. Das Plugin  über Eclipse auf Windows installiert und getestet:
-   Das Pushen aus Eclipse zum Roboter ist via des Plugins nicht möglich
+## Arbeiten mit dem Roboter
 
-2. Das Plugin über Eclipse auf Mac/Ubuntu: Das gleiche Problem nur noch schlimmer
+### Bauen des Projektes
 
-**Zwischenfazit: Das Plugin funktioniert nicht**
+Gebaut kann das Projekt über Eclipse für C werden in Windows.
 
-3. Ich habe mir den uploader (https://github.com/c4ev3/ev3duder) auf Ubuntu heruntergeladen
-   Dort habe ich die Schritte in der Readme befolgt wie man uploaded (siehe https://github.com/c4ev3/ev3duder/blob/master/README.md#uploading) 
-   Das funktioniert auch also ich kann Projekte die ich unter Windows kompiliert habe über Ubuntu uploaden —> Problem: Der Roboter kann die Programme die ich schreibe nicht ausführen also es passiert nichts… Ich habe dann den Motoren Test hochgeladen (siehe https://github.com/c4ev3/ev3duder/blob/master/README.md#tests) und der lässt sich auf dem Roboter ausführen..
+### Hochladen zum Roboter
+
+
+| Was            | System                    | Status |
+| -------------- | ------------------------- | ------ |
+| Plugin Eclipse | Windows                   | ❌     |
+| Plugin Eclipse | Mac                       | ❌     |
+| Plugin Eclipse | Ubuntu                    | ❌     |
+| Ev3Duder       | Mac                       | ❌     |
+| Ev3Duder       | Ubuntu                    | ✅     |
+| Ev3Duder       | Windows (Ubuntu Terminal) | ✅     |
+|                |                           |        |
+
+
+
+#### EV3Duder
+
++ https://github.com/c4ev3/ev3duder
++ Schritte in Readme befolgen https://github.com/c4ev3/ev3duder/blob/master/README.md#uploading
++ Test Upload https://github.com/c4ev3/ev3duder/blob/master/README.md#tests
+
+
