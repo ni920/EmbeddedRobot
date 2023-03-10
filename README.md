@@ -25,7 +25,7 @@ Gebaut kann das Projekt über Eclipse für C werden in Windows.
 | Ev3Duder       | Mac                       | ❌     |
 | Ev3Duder       | Ubuntu                    | ✅     |
 | Ev3Duder       | Windows (Ubuntu Terminal) | ✅     |
-|                |                           |        |
+
 
 
 
