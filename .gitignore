@@ -1,2 +1,5 @@
-/Debug/
+
+.cproject
+.project
+.settings/language.settings.xml
 start.lms

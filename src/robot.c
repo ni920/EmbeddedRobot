@@ -1,5 +1,5 @@
 /*
- \file		roboter.c
+ \file		robot.c
  \author	${user}
  \date		${date}
  \brief		Simple Hello World! for the Ev3
