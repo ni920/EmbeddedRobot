@@ -19,7 +19,7 @@ Gebaut kann das Projekt über Eclipse für C werden in Windows.
 
 | Was            | System                    | Status |
 | -------------- | ------------------------- | ------ |
-| Plugin Eclipse | Windows                   | ❌     |
+| Plugin Eclipse | Windows                   | ✅     |
 | Plugin Eclipse | Mac                       | ❌     |
 | Plugin Eclipse | Ubuntu                    | ❌     |
 | Ev3Duder       | Mac                       | ❌     |
