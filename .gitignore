@@ -3,3 +3,5 @@
 .project
 .settings/language.settings.xml
 start.lms
+/Debug/
+myapps/robot.rbf
