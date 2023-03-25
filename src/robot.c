@@ -2,7 +2,7 @@
  \file		robot.c
  \author	${user}
  \date		${date}
- \brief		Simple Hello World! for the Ev3
+ \brief
  */
 
 #include <ev3.h>
@@ -16,6 +16,8 @@ const int RED = 5;
 const int KICK_SPEED = 100;
 const int ANGLE_360 = 360;
 
+int numberOfBalls;
+
 void init();
 int countBalls();
 int driveForward();
@@ -24,6 +26,7 @@ int driveBackward();
 void exitRobo();
 void kickWithMotor();
 int isPrimeNumber(int);
+void playWinnerSound();
 
 int main(void) {
 	// all initial values
@@ -33,9 +36,11 @@ int main(void) {
 	int isPrime = isPrimeNumber(balls);
 	TermPrintf("IsPrime: %d \n", isPrime);
 	kickRoutine(isPrime);
+	playWinnerSound();
 
 	return 0;
 }
+
 
 void init() {
 	ResetRotationCount(OUT_A);
@@ -54,6 +59,7 @@ int countBalls() {
 			Wait(2000);
 		}
 	}
+	numberOfBalls = ballCount;
 	return ballCount;
 }
 
@@ -83,6 +89,7 @@ void kickRoutine(int isPrime) {
 			Off(OUT_AD);
 			kickWithMotor();
 			ballsToKick--;
+			numberOfBalls--;
 		}
 	}
 
@@ -126,3 +133,14 @@ int isPrimeNumber(int balls) {
 	return prime;
 }
 
+void playWinnerSound() {
+	if (numberOfBalls <= 0) {
+		Tone a[50]={
+				{TONE_C2, NOTE_QUARTER},
+				{TONE_E2, NOTE_QUARTER},
+				{TONE_G2, NOTE_QUARTER},
+				{TONE_C3, NOTE_HALF}
+			};
+			PlayTones(a);
+	}
+}
