@@ -7,9 +7,8 @@
 
 #ifndef ROBOT_H_
 #define ROBOT_H_
-typedef signed int int32_t;
 
-static const int32_t DRIVE_SPEED = 15;
+static const int8_t DRIVE_SPEED = 15;
 static const int32_t DRIVE_STOP = 0;
 static const int32_t KICK_ROTATION_SPEED = 50;
 static const int32_t WHITE = 6;
