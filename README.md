@@ -65,7 +65,7 @@ Gebaut kann das Projekt über Eclipse für C werden in Windows.
 | Plugin Eclipse | Ubuntu                    | ❌     |
 | Ev3Duder       | Mac                       | ❌     |
 | Ev3Duder       | Ubuntu                    | ✅     |
-| Ev3Duder       | Windows (Ubuntu Terminal) | ✅     |
+| Ev3Duder       | Windows (Ubuntu Terminal) | ❌     |
 
 
 
