@@ -107,7 +107,7 @@ static void exitRobo(void) {
 static void kickWithMotor(void) {
 	const int8_t KICK_SPEED = 100;
 	const int32_t ANGLE_360 = 360;
-	(void) RotateMotor(OUT_C, KICK_SPEED, ANGLE_360);
+	(void) RotateMotorEx((0x04), KICK_SPEED, ANGLE_360, 0, (bool) 1, (bool) 1);
 }
 
 static int32_t isPrimeNumber(int32_t balls) {
