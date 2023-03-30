@@ -1,7 +1,7 @@
 /*
  \file		robot.c
- \author	${user}
- \date		${date}
+ \author	Steven Müller 3690229, Marvin Backes 3744337, Nico Saia 3752739
+ \date		30.03.2023
  \brief
  */
 
@@ -33,7 +33,8 @@ static void init(void) {
 static int32_t countBalls(void) {
 	int32_t ballCount = 0;
 	int32_t finished = 1;
-	while ((finished == 1) && (ballCount < (int32_t)sizeof(int32_t)))  {
+	int32_t ballLimit = 50;
+	while ((finished == 1) && (ballCount < ballLimit))  {
 		exitRobo();
 		finished = driveForward();
 		if ((readSensor(IN_4) == WHITE) || (readSensor(IN_4) == RED)) {
@@ -128,11 +129,19 @@ static int32_t isPrimeNumber(int32_t balls) {
 
 static void playWinnerSound(void) {
 	if (numberOfBalls <= 0) {
-		Tone a[4]={
-				{TONE_C2, NOTE_QUARTER},
-				{TONE_E2, NOTE_QUARTER},
-				{TONE_G2, NOTE_QUARTER},
-				{TONE_C3, NOTE_HALF}
+		Tone a[12]={
+				{TONE_E3, NOTE_QUARTER},
+				{TONE_B3, NOTE_HALF},
+				{TONE_C4, NOTE_HALF},
+				{TONE_D4, NOTE_QUARTER},
+				{TONE_C4, NOTE_QUARTER},
+				{TONE_B3, NOTE_HALF},
+				{TONE_A3, NOTE_HALF},
+				{TONE_A3, NOTE_QUARTER},
+				{TONE_C4, NOTE_QUARTER},
+				{TONE_E3, NOTE_QUARTER},
+				{TONE_D4, NOTE_HALF},
+				{TONE_C4, NOTE_HALF}
 			};
 			(void) PlayTones(a);
 	}
